@@ -1,5 +1,9 @@
 package com.example.androidcalculator.core
 
+import android.util.Log
+import android.widget.Toast
+import com.example.androidcalculator.MainActivity
+
 class ExpressionParserImpl : ExpressionParser{
 
 
@@ -14,6 +18,7 @@ class ExpressionParserImpl : ExpressionParser{
         if (funcResult != null) {
             val funcName = funcResult.groupValues[1]
             val value = evaluateExpression(funcResult.groupValues[2])
+            Log.d("function name","funcName : "+funcName)
             return calculator.evaluateFunction(value, funcName)
         }
 

@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9,
             R.id.btnAdd, R.id.btnSubtract, R.id.btnMultiply, R.id.btnDivide,
             R.id.btnDot, R.id.btnEquals, R.id.btnClear, R.id.btnDelete,
-            R.id.btnPower, R.id.btnSqrt, R.id.btnSin, R.id.btnCos, R.id.btnTan, R.id.btnLog
+            R.id.btnPower, R.id.btnSqrt, R.id.btnSin, R.id.btnCos, R.id.btnTan, R.id.btnLog, R.id.btnOpenBracket, R.id.btnCloseBracket
         )
 
         for (id in buttonIds) {

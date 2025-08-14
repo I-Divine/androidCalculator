@@ -21,10 +21,12 @@ class CalculatorImpl : Calculator {
     }
 
     override fun evaluateFunction(value: Double, func: String): Double {
+        println(func)
+        println(value)
         return when (func.lowercase()) {
-            "sin" -> sin(value)
-            "cos" -> cos(value)
-            "tan" -> tan(value)
+            "sin" -> sin(Math.toRadians(value))
+            "cos" -> cos(Math.toRadians(value))
+            "tan" -> tan(Math.toRadians(value))
             "log" -> log10(value)
             "ln"  -> ln(value)
             "sqrt" -> sqrt(value)

@@ -178,20 +178,20 @@
             android:text="." />
 
         <Button
-            android:id="@+id/btnEquals"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_margin="4dp"
-            android:text="=" />
-
-        <Button
             android:id="@+id/btnAdd"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
             android:text="+" />
+
+        <Button
+        android:id="@+id/btnEquals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="=" />
 
         <!-- Row 6 (Functions) -->
         <Button
@@ -225,6 +225,24 @@
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
             android:text="log(" />
+
+        <Button
+        android:id="@+id/btnOpenBracket"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="4dp"
+        android:text="(" />
+
+        <Button
+            android:id="@+id/btnCloseBracket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text=")" />
+
+
 
     </GridLayout>
 
