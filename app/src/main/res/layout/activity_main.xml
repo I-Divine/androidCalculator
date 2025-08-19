@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -7,24 +9,39 @@
 
 
     <!-- Display -->
+
+    <!-- Calculator Buttons -->
+
     <TextView
         android:id="@+id/tvDisplay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#383636"
+        android:textColor="@color/white"
         android:gravity="end"
+
+        android:padding="8dp"
         android:text="0"
         android:textSize="32sp"
-        android:padding="8dp"
-        android:background="#EEEEEE" />
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Calculator Buttons -->
     <GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:columnCount="4"
 
-        android:rowCount="6">
+        android:columnCount="4"
+        android:rowCount="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.881">
 
         <!-- Row 1 -->
         <Button
@@ -32,7 +49,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="20dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="Clear" />
 
         <Button
@@ -42,7 +61,9 @@
             android:layout_row="0"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="Del" />
 
         <Button
@@ -50,7 +71,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="^" />
 
         <Button
@@ -58,7 +81,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="20dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="sqrt(" />
 
         <!-- Row 2 -->
@@ -67,7 +92,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="7" />
 
         <Button
@@ -75,7 +102,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="8" />
 
         <Button
@@ -83,7 +112,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="9" />
 
         <Button
@@ -91,7 +122,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="/" />
 
         <!-- Row 3 -->
@@ -100,7 +133,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="4" />
 
         <Button
@@ -108,7 +143,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="5" />
 
         <Button
@@ -116,7 +153,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="6" />
 
         <Button
@@ -124,7 +163,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="*" />
 
         <!-- Row 4 -->
@@ -133,7 +174,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="1" />
 
         <Button
@@ -141,7 +184,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="2" />
 
         <Button
@@ -149,7 +194,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="3" />
 
         <Button
@@ -157,7 +204,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="-" />
 
         <!-- Row 5 -->
@@ -166,7 +215,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="0" />
 
         <Button
@@ -174,7 +225,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="." />
 
         <Button
@@ -182,16 +235,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:padding="2dp"
+            android:textSize="22dp"
+            android:layout_margin="1dp"
             android:text="+" />
 
-        <Button
-        android:id="@+id/btnEquals"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:layout_margin="4dp"
-        android:text="=" />
 
         <!-- Row 6 (Functions) -->
         <Button
@@ -199,7 +247,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="sin(" />
 
         <Button
@@ -207,7 +257,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:layout_margin="1dp"
+            android:padding="2dp"
             android:text="cos(" />
 
         <Button
@@ -215,35 +267,55 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:textSize="22dp"
+            android:padding="2dp"
+            android:layout_margin="1dp"
             android:text="tan(" />
 
+
+
         <Button
-            android:id="@+id/btnLog"
+            android:id="@+id/btnOpenBracket"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
-            android:text="log(" />
-
-        <Button
-        android:id="@+id/btnOpenBracket"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:layout_margin="4dp"
-        android:text="(" />
+            android:layout_margin="1dp"
+            android:padding="2dp"
+            android:textSize="22dp"
+            android:text="(" />
 
         <Button
             android:id="@+id/btnCloseBracket"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:layout_margin="4dp"
+            android:layout_margin="1dp"
+            android:padding="2dp"
+            android:textSize="22dp"
             android:text=")" />
 
+        <Button
+            android:id="@+id/btnLog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="1dp"
+            android:padding="2dp"
+            android:textSize="22dp"
+            android:text="log(" />
 
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_margin="1dp"
+            android:padding="2dp"
+            android:textSize="25dp"
+
+            android:text="=" />
 
     </GridLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
